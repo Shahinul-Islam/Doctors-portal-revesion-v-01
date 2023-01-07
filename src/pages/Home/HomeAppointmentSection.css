@@ -1,0 +1,17 @@
+
+@media only screen and (max-width:425px) {
+    .appointmentSection{
+        height: 500px;
+    }
+    
+}
+@media only screen and (min-width: 500px) and (max-width:768px){
+    .appointmentSection{
+        height: 900px;
+    }
+}
+@media only screen and (min-width: 800px) {
+    .appointmentSection{
+        height: 543px;
+    }
+}
