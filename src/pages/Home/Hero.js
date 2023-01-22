@@ -12,7 +12,7 @@ const Hero = () => {
         backgroundSize: "cover",
       }}
     >
-      <div className="hero-content flex flex-col-reverse md:flex-row">
+      <div className="hero-content flex flex-col-reverse lg:flex-row">
         <div className="">
           <h1 className="text-3xl lg:text-5xl font-bold mt-7">
             Your New Smile Starts Here

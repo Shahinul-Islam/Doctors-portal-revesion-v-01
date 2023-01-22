@@ -4,8 +4,8 @@ import footerBg from "../../../images/footer.png";
 const Footer = () => {
   return (
     <div
-      className=" p-4 bg-center bg-cover w-full"
-      style={{ backgroundImage: `url(${footerBg})` }}
+      className=" p-4 bg-center bg-cover w-full bg-slate-100"
+      style={{ backgroundImage: `url(${footerBg})`, bottom: 0 }}
     >
       <footer className="md:flex gap-4 justify-evenly items-center text-[#3A4256]">
         <div className="flex flex-col my-2">

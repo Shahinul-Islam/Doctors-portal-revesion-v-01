@@ -5,7 +5,7 @@ import phone from "../../icons/phone.svg";
 
 const HeroCard = () => {
   return (
-    <div className="grid md:grid-cols-3 gap-9 place-items-center p-2">
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-9 place-items-center p-2">
       <div
         className="card bg-gradient-to-r from-[#19C0D3] to-[#0FCFEC] text-primary-content"
         style={{ maxWidth: "450px" }}

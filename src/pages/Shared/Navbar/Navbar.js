@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../../contexts/AuthProvider";
 
 const Navbar = () => {
+  const { user, signOutUser } = useContext(AuthContext);
+  const handleSignOut = () => {
+    signOutUser()
+      .then((result) => console.log(result))
+      .catch((err) => console.error(err));
+  };
   return (
     <div className="navbar bg-base-100">
       <div className="navbar-start">
@@ -31,23 +38,28 @@ const Navbar = () => {
             </li>
 
             <li>
-              <Link to="about">About</Link>
-            </li>
-
-            <li>
               <Link to="appointment">Appointment</Link>
             </li>
 
-            <li>
-              <Link to="reviews">Reviews</Link>
-            </li>
-
-            <li>
+            {/* <li>
               <Link to="contact-us">Contact Us</Link>
-            </li>
-            <li>
-              <Link to="login">Login</Link>
-            </li>
+            </li> */}
+            {user && user ? (
+              <>
+                <li>
+                  <Link to="dashboard">Dashboard</Link>
+                </li>
+                <li onClick={handleSignOut}>
+                  <Link to="/login">Logout</Link>
+                </li>
+              </>
+            ) : (
+              <>
+                <li>
+                  <Link to="login">Login</Link>
+                </li>
+              </>
+            )}
           </ul>
         </div>
         <Link className="btn btn-ghost normal-case text-xl">
@@ -61,23 +73,29 @@ const Navbar = () => {
           </li>
 
           <li>
-            <Link to="about">About</Link>
-          </li>
-
-          <li>
             <Link to="appointment">Appointment</Link>
           </li>
 
-          <li>
-            <Link to="reviews">Reviews</Link>
-          </li>
-
-          <li>
+          {/* <li>
             <Link to="contact-us">Contact Us</Link>
-          </li>
-          <li>
-            <Link to="login">Login</Link>
-          </li>
+          </li> */}
+
+          {user && user ? (
+            <>
+              <li>
+                <Link to="dashboard">Dashboard</Link>
+              </li>
+              <li onClick={handleSignOut}>
+                <Link to="/login">Logout</Link>
+              </li>
+            </>
+          ) : (
+            <>
+              <li>
+                <Link to="login">Login</Link>
+              </li>
+            </>
+          )}
         </ul>
       </div>
     </div>

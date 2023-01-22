@@ -10,7 +10,7 @@ const ServiceHero = () => {
           className="min-w-xs md:max-w-md rounded-lg"
         />
         <div className="md:pl-8">
-          <h1 className="text-5xl font-bold">
+          <h1 className="text-xl md:text-3xl lg:text-4xl font-bold">
             Exceptional Dental Care, on Your Terms
           </h1>
           <p className="py-6">

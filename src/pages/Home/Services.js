@@ -9,7 +9,7 @@ const Services = () => {
       <p className="text-3xl mt-4 text-center text-[#3A4256]">
         Services We Provide
       </p>
-      <div className="grid md:grid-cols-3 gap-5 p-6">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 p-6">
         <div className="card bg-base-100 shadow-xl">
           <figure className="px-10 pt-10">
             <img
