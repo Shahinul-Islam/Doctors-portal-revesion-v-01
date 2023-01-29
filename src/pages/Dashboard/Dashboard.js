@@ -10,7 +10,7 @@ const Dashboard = () => {
   useEffect(() => {
     setLoading(true);
     if (user) {
-      const url = `http://localhost:5000/myAppointments?email=${user.email}`;
+      const url = `https://doctors-portal-server-ten-indol.vercel.app/myAppointments?email=${user.email}`;
       fetch(url)
         .then((res) => res.json())
         .then((data) => {

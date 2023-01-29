@@ -19,7 +19,7 @@ const AppointmentModal = ({ treatment, mySlot, selected }) => {
       selectedSlot: mySlot,
       date: format(selected, "PP"),
     };
-    fetch("http://localhost:5000/myAppointment", {
+    fetch("https://doctors-portal-server-ten-indol.vercel.app/myAppointment", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(appointmentDetails),
