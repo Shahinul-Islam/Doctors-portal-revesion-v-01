@@ -1,13 +1,12 @@
 import React from "react";
 import Dashboard from "../pages/Dashboard/Dashboard";
-import Navbar from "../pages/Shared/Navbar/Navbar";
 
 const DB = () => {
-  return (
-    <div>
-      <Dashboard></Dashboard>
-    </div>
-  );
+	return (
+		<div className="min-h-screen">
+			<Dashboard></Dashboard>
+		</div>
+	);
 };
 
 export default DB;
